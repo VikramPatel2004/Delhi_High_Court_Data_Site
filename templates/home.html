@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Delhi High Court Case Detail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- 🔹 Sticky Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Delhi High Court Data Extractor</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="main-layout">
+
+        <div class="greeting">
+            <h2>Welcome to Delhi High Court Data Extractor</h2>
+            <p>This is a website to fetch all your case related data.</p>
+        </div>
+{% if error %}
+    <div class="alert">
+        {{ error }}
+    </div>
+    {% endif %}
+
+        <div class="case-form-container">
+            <h2 class="main-heading">DELHI HIGH COURT DATA</h2>
+            <div class="sub-heading">Case Data</div>
+
+            <form method="POST" >
+                <select class="form-input" required  name = case_type>
+
+                    <option value="">Case Type</option>
+                    {% for i in case_list %}
+                    <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+
+
+                <input type="text" id="case-number" class="form-input" name="case_number" placeholder="Enter Case No." required>
+
+
+                <select class="form-input" required name = case_year>
+                    <option value="">Year</option>
+                    {% for i in range(current_year,1950,-1) %}
+                    <option value="{{i}}">{{i}}</option>
+                    {% endfor %}
+                </select>
+
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

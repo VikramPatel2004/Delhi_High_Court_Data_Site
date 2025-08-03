@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case Result - Delhi High Court</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Delhi High Court Data Extractor</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-layout">
+        <div class="result-container">
+            <h2 class="main-heading">Case Results</h2>
+
+            <div class="result-field">
+                <strong>Party Name:</strong> {{ party_name }}
+            </div>
+
+            <div class="result-field">
+                <strong>Filing Date:</strong> {{ filing_date }}
+            </div>
+
+            <div class="result-field">
+                <strong>Registeration Date:</strong> {{ registeration_date }}
+            </div>
+
+            <div class="result-field">
+                <strong>Order Dates & Links:</strong>
+                <ul>
+                    {% for date, link in zipped_orders %}
+                    <li>{{ date }} - <a href="{{ link }}" target="_blank">View Order</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="result-field">
+                <strong>Hearing Date:</strong><br>
+                {{ next_date.replace('Last Date:', '<br>Last Date:').replace('COURT NO:', '<br>COURT NO:') | safe }}
+            </div>
+
+
+            <div class="result-field">
+                <strong>Judgment:</strong>
+                {% if judgement_link != "Server Error" %}
+                <a href="{{ judgement_link }}" target="_blank" class="judgment-link">Download PDF</a>
+                {% else %}
+                <span style="color: red;">Judgment not available</span>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

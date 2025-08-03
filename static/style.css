@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  padding-top: 70px;
+}
+
+/* 🔹 Sticky Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #2ecc71;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nav-logo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #dff6ea;
+}
+
+/* 🔹 Main Layout */
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  gap: 30px;
+}
+
+/* 🔹 Greeting Section */
+.greeting {
+  text-align: center;
+  max-width: 600px;
+}
+
+.greeting h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.greeting p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* 🔹 Form Container */
+.case-form-container {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  text-align: center;
+}
+
+.main-heading {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-heading {
+  background-color: #e6f8ec;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #28d463;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #24c157;
+}
+
+### Result CSS ##########
+.result-container {
+    background-color: white;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.result-field {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.result-field ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.result-field a {
+    color: #1a73e8;
+    text-decoration: underline;
+}
+
+.judgment-link {
+    display: inline-block;
+    background-color: #28c26b;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.judgment-link:hover {
+    background-color: #1e9e56;
+}
+
+## for aler message
+.alert {
+    background-color: #ffe1e1;
+    color: #a40000;
+    padding: 12px 20px;
+    margin: 1rem auto;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #ffb3b3;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
