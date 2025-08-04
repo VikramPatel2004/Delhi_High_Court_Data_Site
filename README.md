@@ -16,6 +16,12 @@ A web automation tool that extracts court orders from Delhi High Court website. 
 they use security code as captcha and shows some random no. as image for user to enter .That security code is available in sorce
 html So i Just scrape it from There.
 
+#Error Handling
+some Error Handling:
+1.	If Data is not Real or invalid case details
+2.	If There is server error at the page which I use to extract details (shows server error but loads rest available details)
+3.	If judgement is available it shows to download the judgement pdf otherwise shows not available.
+
 🧱 Tech Stack
 
 Language: Python 3.10
